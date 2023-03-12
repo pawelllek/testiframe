@@ -20,7 +20,7 @@
       window.top.postMessage('window.top: hello from pause', '*');
 
       console.log('przed window.postMessage');
-      window.postMessage('window: hello from pause', '*');
+      window.postMessage('window: hello from pause', '*'); // TO NIE DZIAŁA
 
       console.log('przed window.parent 1.postMessage');
       if (window !== window.parent) {
@@ -30,7 +30,7 @@
       console.log('przed window.parent 2.postMessage');
       window.parent.postMessage('window.parent 2: hello from pause', '*');
      
-
+      // TO NIE DZIAŁA - WSZYSTKO W DÓŁ
       console.log('2 przed window.top.postMessage');
       window.top.postMessage('window.top: hello from pause', 'https://pawelllek.github.io');
 
