@@ -16,22 +16,38 @@
 <!--    <script src="js/main.js"></script> -->
    
    <script>
-      console.log('PauseSystemComponent - getMessageFromPostMessage - przed window.top.postMessage');
+      console.log('przed window.top.postMessage');
       window.top.postMessage('window.top: hello from pause', '*');
 
-      console.log('PauseSystemComponent - getMessageFromPostMessage - przed window.postMessage');
+      console.log('przed window.postMessage');
       window.postMessage('window: hello from pause', '*');
 
-      console.log('PauseSystemComponent - getMessageFromPostMessage - przed window.parent 1.postMessage');
+      console.log('przed window.parent 1.postMessage');
       if (window !== window.parent) {
         window.parent.postMessage('window.parent 1: hello from pause', '*');
       }
 
-      console.log('PauseSystemComponent - getMessageFromPostMessage - przed window.parent 2.postMessage');
+      console.log('przed window.parent 2.postMessage');
       window.parent.postMessage('window.parent 2: hello from pause', '*');
+     
 
-      console.log('window: ', window);
-      console.log('window.parent: ', window.parent);
+      console.log('2 przed window.top.postMessage');
+      window.top.postMessage('window.top: hello from pause', 'https://pawelllek.github.io');
+
+      console.log('2 przed window.postMessage');
+      window.postMessage('window: hello from pause', 'http://localhost:8088');
+
+      console.log('2 przed window.parent 1.postMessage');
+      if (window !== window.parent) {
+        window.parent.postMessage('window.parent 1: hello from pause', 'https://pawelllek.github.io');
+      }
+
+      console.log('2 przed window.parent 2.postMessage');
+      window.parent.postMessage('window.parent 2: hello from pause', 'https://pawelllek.github.io');
+     
+
+//       console.log('window: ', window);
+//       console.log('window.parent: ', window.parent);
    </script>
  </body>
 
